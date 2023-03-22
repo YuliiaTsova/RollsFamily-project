@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Rolls</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__main">
+        <div class="header__logo">
+          <img src="./img/logo.svg" alt="logo" class="header__logo-img">
+          <h1 class="header__logo-title">RollsFamily</h1>
+        </div>
+        <nav class="header__nav nav">
+          <ul class="nav__list list-reset">
+            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Menu</a></li>
+            <!-- <li class="nav__item"><a href="#" class="nav__link">About</a></li> -->
+            <li class="nav__item"><a href="#" class="nav__link">Review</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+          </ul>
+          <div class="header__cart cart">
+            <img src="./img/cart.svg" alt="cart" class="cart__img">
+            <span class="cart__quantity">0</span>
+            <div class="cart__content">
+              <ul class="cart__content-list list-reset">
+                <li class="cart__content-item">
+                  <article class="cart__content-product cart-product">
+                    <div class="cart-product__pic">
+                      <img src="./img/roll-2.jpg" alt="Philadelphia Roll" class="cart-product__img">
+                    </div>
+                    <div class="cart-product__order">
+                      <div class="cart-product__descr">
+                        <h3 class="cart-product__title">Philadelphia Roll</h3>
+                        <p class="cart-product__about">6 pcs / 205 g.</p>
+                      </div>
+                      <div class="cart-product__details">
+                        <div class="cart-product__quantity">
+                          <div class="quantity">
+                            <button class="quantity__minus btn-reset" aria-label="minus one">-</button>
+                            <span class="quantity__value">1</span>
+                            <button class="quantity__add btn-reset" aria-label="add one">+</button>
+                          </div>
+                        </div>
+                        <p class="cart-product__price">15 $</p>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+                <li class="cart__content-item">
+                  <article class="cart__content-product cart-product">
+                    <div class="cart-product__pic">
+                      <img src="./img/roll-2.jpg" alt="Philadelphia Roll" class="cart-product__img">
+                    </div>
+                    <div class="cart-product__order">
+                      <div class="cart-product__descr">
+                        <h3 class="cart-product__title">Philadelphia Roll</h3>
+                        <p class="cart-product__about">6 pcs / 205 g.</p>
+                      </div>
+                      <div class="cart-product__details">
+                        <div class="cart-product__quantity">
+                          <div class="quantity">
+                            <button class="quantity__minus btn-reset" aria-label="minus one">-</button>
+                            <span class="quantity__value">1</span>
+                            <button class="quantity__add btn-reset" aria-label="add one">+</button>
+                          </div>
+                        </div>
+                        <p class="cart-product__price">15 $</p>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+              </ul>
+              <div class="cart__summary">
+                <p class="cart__delivey free-delivery">Delivery: <span>free</span></p>
+                <p class="cart__final-price">Subtotal: <span>15$</span></p>
+                <button class="cart__btn btn btn-intense btn-reset">GO TO CHECKOUT</button>
+              </div>
+            </div>
+          </div>
+          <div class="burger-wrapper">
+            <button class="header__burger burger btn-reset" aria-label="Open menu">
+              <span class="burger__line"></span>
+            </button>
+            <div class="burger-overlay">
+              <div class="burger-content">
+                <div class="burger-content__controls">
+                  <button class="burger-content__btn btn-reset" aria-label="Close menu"></button>
+                </div>
+                <a href="tel:+15060000000" class="burger-content__tel">506 000 00 00</a>
+                <!-- <p style="color:red">style</p> -->
+                <!-- <div class="nav">
+                          <ul class="nav__list list-reset">
+                            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link">Menu</a></li>
+          
+                            <li class="nav__item"><a href="#" class="nav__link">Review</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+                          </ul>
+                        </div> -->
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="header__motto">
+        <h2 class="header__title">Rolls delivery</h2>
+        <p class="header__descr">Fast and tasty</p>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <h2 class="visually-hidden">List of products</h2>
+    <div class="container">
+      <div class="products">
+        <article class="products__item">
+          <img src="./img/roll-1.jpg" alt="Philadelphia Roll" class="products__img">
+          <h2 class="products__title title">Philadelphia Roll</h2>
+          <p class="products__portion">6 pcs</p>
+          <div class="products__details">
+            <div class="products__quantity">
+              <div class="quantity">
+                <button class="quantity__minus btn-reset" aria-label="minus one">-</button>
+                <span class="quantity__value">1</span>
+                <button class="quantity__add btn-reset" aria-label="add one">+</button>
+              </div>
+            </div>
+            <div class="products__desc">
+              <p class="products__weight">180 g</p>
+              <p class="products__price">15 $</p>
+            </div>
+          </div>
+          <button class="products__btn-add btn btn-reset" aria-label="add to cart">+ add to cart</button>
+        </article>
+        <article class="products__item">
+          <img src="./img/roll-1.jpg" alt="Philadelphia Roll" class="products__img">
+          <h2 class="products__title title">Philadelphia Roll</h2>
+          <p class="products__portion">6 pcs</p>
+          <div class="products__details">
+            <div class="products__quantity">
+              <div class="quantity">
+                <button class="quantity__minus btn-reset" aria-label="minus one">-</button>
+                <span class="quantity__value">1</span>
+                <button class="quantity__add btn-reset" aria-label="add one">+</button>
+              </div>
+            </div>
+            <div class="products__desc">
+              <p class="products__weight">180 g</p>
+              <p class="products__price">15 $</p>
+            </div>
+          </div>
+          <button class="products__btn-add btn btn-reset" aria-label="add to cart">+ add to cart</button>
+        </article>
+        <article class="products__item">
+          <img src="./img/roll-1.jpg" alt="Philadelphia Roll" class="products__img">
+          <h2 class="products__title title">Philadelphia Roll</h2>
+          <p class="products__portion">6 pcs</p>
+          <div class="products__details">
+            <div class="products__quantity">
+              <div class="quantity">
+                <button class="quantity__minus btn-reset" aria-label="minus one">-</button>
+                <span class="quantity__value">1</span>
+                <button class="quantity__add btn-reset" aria-label="add one">+</button>
+              </div>
+            </div>
+            <div class="products__desc">
+              <p class="products__weight">180 g</p>
+              <p class="products__price">15 $</p>
+            </div>
+          </div>
+          <button class="products__btn-add btn btn-reset" aria-label="add to cart">+ add to cart</button>
+        </article>
+        <article class="products__item">
+          <img src="./img/roll-1.jpg" alt="Philadelphia Roll" class="products__img">
+          <h2 class="products__title title">Philadelphia Roll</h2>
+          <p class="products__portion">6 pcs</p>
+          <div class="products__details">
+            <div class="products__quantity">
+              <div class="quantity">
+                <button class="quantity__minus btn-reset" aria-label="minus one">-</button>
+                <span class="quantity__value">1</span>
+                <button class="quantity__add btn-reset" aria-label="add one">+</button>
+              </div>
+            </div>
+            <div class="products__desc">
+              <p class="products__weight">180 g</p>
+              <p class="products__price">15 $</p>
+            </div>
+          </div>
+          <button class="products__btn-add btn btn-reset" aria-label="add to cart">+ add to cart</button>
+        </article>
+        <article class="products__item">
+          <img src="./img/roll-1.jpg" alt="Philadelphia Roll" class="products__img">
+          <h2 class="products__title title">Philadelphia Roll</h2>
+          <p class="products__portion">6 pcs</p>
+          <div class="products__details">
+            <div class="products__quantity">
+              <div class="quantity">
+                <button class="quantity__minus btn-reset" aria-label="minus one">-</button>
+                <span class="quantity__value">1</span>
+                <button class="quantity__add btn-reset" aria-label="add one">+</button>
+              </div>
+            </div>
+            <div class="products__desc">
+              <p class="products__weight">180 g</p>
+              <p class="products__price">15 $</p>
+            </div>
+          </div>
+          <button class="products__btn-add btn btn-reset" aria-label="add to cart">+ add to cart</button>
+        </article>
+        <article class="products__item">
+          <img src="./img/roll-1.jpg" alt="Philadelphia Roll" class="products__img">
+          <h2 class="products__title title">Philadelphia Roll</h2>
+          <p class="products__portion">6 pcs</p>
+          <div class="products__details">
+            <div class="products__quantity">
+              <div class="quantity">
+                <button class="quantity__minus btn-reset" aria-label="minus one">-</button>
+                <span class="quantity__value">1</span>
+                <button class="quantity__add btn-reset" aria-label="add one">+</button>
+              </div>
+            </div>
+            <div class="products__desc">
+              <p class="products__weight">180 g</p>
+              <p class="products__price">15 $</p>
+            </div>
+          </div>
+          <button class="products__btn-add btn btn-reset" aria-label="add to cart">+ add to cart</button>
+        </article>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__container">
+        <section class="footer__about" aria-label="contacts">
+          <address class="footer__address">100 Main St, Fredericton, New Brunswick</address>
+          <a href="tel:+15060000000" class="footer__tel">506 000 00 00</a>
+        </section>
+        <section class="footer__nav" aria-label=" footer navigation">
+          <ul class="footer__list list-reset">
+            <li class="footer_item"><a href="#" class="footer__link">Home</a></li>
+            <li class="footer_item"><a href="#" class="footer__link">Menu</a></li>
+            <!-- <li class="footer_item"><a href="#" class="footer__link">About</a></li> -->
+            <li class="footer_item"><a href="#" class="footer__link">Review</a></li>
+            <li class="footer_item"><a href="#" class="footer__link">Contact</a></li>
+          </ul>
+        </section>
+        <section class="footer__social social">
+          <h2 class="social__title">stay connected</h2>
+          <ul class="social__list list-reset">
+            <li class="social__item">
+              <a href="#" target="_blank" class="social__link" aria-label="telegram">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M20 40.0005C31.0457 40.0005 40 31.0462 40 20.0005C40 8.95479 31.0457 0.000488281 20 0.000488281C8.95431 0.000488281 0 8.95479 0 20.0005C0 31.0462 8.95431 40.0005 20 40.0005ZM16.3333 29.1672C16.8198 29.1672 17.0421 28.9507 17.3107 28.6892L17.3333 28.6672L19.7356 26.3313L24.7333 30.0237C25.6531 30.5311 26.3169 30.2684 26.546 29.1697L29.8268 13.7092C30.1627 12.3625 29.3135 11.7517 28.4336 12.1512L9.1686 19.5797C7.85358 20.1072 7.86125 20.8408 8.9289 21.1677L13.8727 22.7108L25.3182 15.4899C25.8585 15.1623 26.3544 15.3384 25.9474 15.6997L16.6738 24.0684L16.6737 24.0683L16.6737 24.0685L16.6733 24.0688L16.6736 24.069L16.3333 29.1672Z" />
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" target="_blank" class="social__link" aria-label="facebook">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M20 0.000488281C8.95431 0.000488281 0 8.95479 0 20.0005C0 31.0462 8.95431 40.0005 20 40.0005C31.0457 40.0005 40 31.0462 40 20.0005C40 8.95479 31.0457 0.000488281 20 0.000488281ZM22.0846 20.879V31.7601H17.5826V20.8794H15.3333V17.1297H17.5826V14.8785C17.5826 11.8195 18.8526 10.0005 22.461 10.0005H25.4651V13.7506H23.5873C22.1827 13.7506 22.0897 14.2746 22.0897 15.2526L22.0846 17.1293H25.4863L25.0883 20.879H22.0846Z" />
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" target="_blank" class="social__link" aria-label="instagram">
+                <svg data-name="Layer 1" id="Layer_1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                  <title />
+                  <path
+                    d="M314.757,147.525H197.243a49.717,49.717,0,0,0-49.718,49.718V314.757a49.718,49.718,0,0,0,49.718,49.718H314.757a49.718,49.718,0,0,0,49.717-49.718V197.243A49.717,49.717,0,0,0,314.757,147.525ZM256,324.391A68.391,68.391,0,1,1,324.391,256,68.391,68.391,0,0,1,256,324.391ZM327.242,201.58a16.271,16.271,0,1,1,16.27-16.271A16.271,16.271,0,0,1,327.242,201.58Z" />
+                  <path d="M256,211.545A44.455,44.455,0,1,0,300.455,256,44.455,44.455,0,0,0,256,211.545Z" />
+                  <path
+                    d="M256,0C114.615,0,0,114.615,0,256S114.615,512,256,512,512,397.385,512,256,397.385,0,256,0ZM389.333,312.5A76.836,76.836,0,0,1,312.5,389.333H199.5A76.837,76.837,0,0,1,122.666,312.5V199.5A76.836,76.836,0,0,1,199.5,122.667H312.5A76.836,76.836,0,0,1,389.333,199.5Z" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="footer__subscribe">
+          <h2 class="footer__form-title">Subscribe</h2>
+          <form action="#" class="footer__form">
+            <input type="email" name="emal" class="footer__email" placeholder="e-mail" aria-label="type email">
+            <button class="footer__form-btn btn-reset" aria-label="send email">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 5L15 12L8 19" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </form>
+        </section>
+      </div>
+      <p class="footer__copyright"><span>&copy;</span> 2023 RollsFamily</p>
+    </div>
+  </footer>
+</body>
+
+</html>
