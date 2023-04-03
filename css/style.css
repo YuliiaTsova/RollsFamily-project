@@ -59,20 +59,6 @@ a {
   font-weight: 700;
   font-style: normal;
 }
-@font-face {
-  font-family: "DarkerGrotesque";
-  src: url(../fonts/DarkerGrotesque-Bold.woff2) format("woff2");
-  font-display: swap;
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "DarkerGrotesque";
-  src: url(../fonts/DarkerGrotesque-Regular.woff2) format("woff2");
-  font-display: swap;
-  font-weight: 400;
-  font-style: normal;
-}
 body {
   font-family: "Merriweather", serif;
   background-color: #f8f9f9;

@@ -64,22 +64,6 @@ a {
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'DarkerGrotesque';
-  src: url(../fonts/DarkerGrotesque-Bold.woff2) format('woff2');
-  font-display: swap;
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'DarkerGrotesque';
-  src: url(../fonts/DarkerGrotesque-Regular.woff2) format('woff2');
-  font-display: swap;
-  font-weight: 400;
-  font-style: normal;
-}
-
 $main_color: #212529;
 $orange_color: #eb5a1e;
 $gray_color: #65727e;
@@ -139,7 +123,6 @@ body {
   }
   &__motto {
     margin: 0 auto;
-    //max-width: clamp(230px, 30%, 400px);
     width: 230px;
     margin-top: 15px;
     text-align: center;
@@ -211,36 +194,28 @@ body {
   @media (max-width: 57.81rem) {
     //925px
     &__list {
-      //display: none;
       flex-direction: column;
       position: fixed;
       z-index: 200;
       top: 70px;
-      // right: 110px;
       right: -230px;
       transition: right 0.3s ease-in-out;
     }
     &__link {
-      font-size: 18px; // 1.5rem;
+      font-size: 18px;
       line-height: 2;
       color: #fff;
     }
   }
   &__list.burger-content--active {
-    //display: block;
     right: 110px;
   }
-  // &__link {
-  //   font-size: 1.5rem;
-  //   line-height: 2;
-  //   color: #fff;
-  // }
 }
 
 .cart {
   margin-left: 20px;
   position: relative;
-  //padding: 10px;
+
   padding: 0.6rem;
   padding-left: 0;
   cursor: pointer;
@@ -275,13 +250,10 @@ body {
       display: block;
     }
   }
-  // &:hover ~ .cart__content {
-  //   display: block;
-  // }
+
   &__notification {
     width: clamp(150px, 20vw, 300px);
     height: auto;
-    //margin: 5px;
   }
   &__notification-title {
     margin: 0;
@@ -302,7 +274,6 @@ body {
     overflow-y: auto;
   }
   &__content-item {
-    //:not(:last-child) {
     margin-bottom: 10px;
   }
   &__content-product {
@@ -342,9 +313,6 @@ body {
     flex-basis: 60%;
     text-align: center;
     span {
-      // font-family: 'Times New Roman', serif;
-      // font-size: 1.25rem;
-      // font-weight: 700;
       color: $orange_color;
     }
   }
@@ -396,34 +364,11 @@ body {
   }
 }
 
-// .burger--active .burger__line {
-//   opacity: 0;
-// }
-// .burger--active {
-//   &::before {
-//     top: 50%;
-//     transform: rotate(45deg);
-//   }
-//   &::after {
-//     bottom: auto;
-//     top: 50%;
-//     transform: rotate(-45deg);
-//   }
-// }
-
 .stop-scroll {
   overflow: hidden;
 }
 
 .burger-overlay {
-  // position: fixed;
-  // background-color: transparent;
-  // width: 100%;
-  // height: 100%;
-  // top: 0;
-  // left: 0;
-  // z-index: -1;
-  // transition: background-color 0.9s ease-in-out;
 }
 
 .burger-overlay.burger-content--active {
@@ -492,16 +437,6 @@ body {
   }
 }
 
-// .burger-content__btn--active {
-//   &::before {
-//     transform: none;
-//   }
-//   &::after {
-//     transform: none;
-//     bottom: -30px;
-//   }
-// }
-
 .burger-content--active .burger-content {
   right: 0;
   visibility: visible;
@@ -534,7 +469,6 @@ body {
   align-items: center;
   padding: 5px;
   &__pic {
-    // align-self: flex-start;
   }
   &__img {
     display: block;
@@ -557,7 +491,6 @@ body {
     color: $gray_color;
     font-size: 1rem;
     font-weight: 400;
-    // font-style: italic;
     font-family: 'Times New Roman', serif;
   }
   &__details {
@@ -570,12 +503,9 @@ body {
     height: 23px;
     font-size: 0.8rem;
     margin-right: 10px;
-    // width: 6.25rem;
-    // height: 1.563rem;
   }
   &__price {
     margin: 0;
-    // font-size: 1rem;
     font-family: 'Times New Roman', serif;
     font-weight: 700;
   }
@@ -630,7 +560,6 @@ body {
     margin: 15px 0 0 0;
     text-align: center;
     font-weight: 400;
-    // font-size: 1rem;
     font-family: 'Times New Roman', serif;
     color: lighten($main_color, 30%);
   }
@@ -640,29 +569,17 @@ body {
     justify-content: space-around;
     align-items: center;
     margin-top: 10px;
-    //margin-left: auto;
-    // margin-right: auto;
-    //  width: 75%;
   }
   &__quantity {
     width: 60%;
-    // width: 130px;
     height: 30px;
-    // width: 9.375rem;
-    // height: 2.19rem;
   }
   media &__desc {
-    //  width: 70px;
-    // margin-left: -50px;
-    //flex-grow: 1;
-    //text-align: center;
     font-family: 'Times New Roman', serif;
   }
   &__weight {
     margin: 0;
     font-size: 1rem;
-    // font-style: italic;
-
     color: lighten($main_color, 30%);
   }
   &__price {
@@ -695,21 +612,12 @@ body {
   border-radius: 8px;
   width: 100%;
   height: 100%;
-  //margin-right: 15px;
-  //padding: 3px 0;
-  // padding: 2% 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // height: 35px;
-  // overflow: hidden;
   background-color: rgb(242, 237, 231);
 
   &__minus {
-    //padding: 3.334% 10% 3.334% 10%;
-    // padding: 6px 15px 6px 15px;
-    // width: 2.5rem;
-    // height: 2.19rem;
     width: 28%;
     height: 100%;
     border-bottom-left-radius: 8px;
@@ -724,8 +632,6 @@ body {
     font-weight: 300;
   }
   &__add {
-    //padding: 0 5px;
-    //padding: 5px 15px 5px 15px;
     width: 28%;
     height: 100%;
     border-bottom-right-radius: 8px;
@@ -754,7 +660,6 @@ body {
     font-size: 1rem;
   }
   &__about {
-    // align-self: center;
   }
   &__logo {
     width: 100px;
@@ -766,13 +671,9 @@ body {
     object-fit: cover;
   }
   &__address {
-    //margin-top: 10px;
-
     max-width: 200px;
     font-size: 1em;
     font-weight: 300;
-    // font-family: Arial, Helvetica, sans-serif;
-
     span {
       text-transform: uppercase;
     }
@@ -792,7 +693,6 @@ body {
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    //grid-auto-rows: 40px;
     row-gap: 15px;
   }
   &_item {
@@ -802,7 +702,6 @@ body {
     transition: color 0.2s ease-in-out;
     &:hover {
       color: $orange_color;
-      //transition: color 0.8s ease-in-out;
     }
   }
   &__social {
@@ -838,7 +737,6 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    // bottom: 7px;
     right: -5px;
     svg {
       width: 24px;
@@ -860,12 +758,6 @@ body {
       row-gap: 20px;
       font-size: 1.25rem;
     }
-    // &__about {
-    //   justify-self: center;
-    // }
-    // &__social {
-    //   justify-self: center;
-    // }
   }
   @media (max-width: 23.2rem) {
     //370
