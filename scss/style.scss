@@ -28,49 +28,53 @@ a {
   cursor: pointer;
 }
 
+.d-none {
+  display: none;
+}
+
 @font-face {
-  font-family: "Merriweather";
-  src: url(../fonts/Merriweather-Light.woff2) format("woff2");
+  font-family: 'Merriweather';
+  src: url(../fonts/Merriweather-Light.woff2) format('woff2');
   font-display: swap;
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Merriweather";
-  src: url(../fonts/Merriweather-Regular.woff2) format("woff2");
+  font-family: 'Merriweather';
+  src: url(../fonts/Merriweather-Regular.woff2) format('woff2');
   font-display: swap;
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Merriweather";
-  src: url(../fonts/Merriweather-RegularItalic.woff2) format("woff2");
+  font-family: 'Merriweather';
+  src: url(../fonts/Merriweather-RegularItalic.woff2) format('woff2');
   font-display: swap;
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
-  font-family: "Merriweather";
-  src: url(../fonts/Merriweather-Bold.woff2) format("woff2");
+  font-family: 'Merriweather';
+  src: url(../fonts/Merriweather-Bold.woff2) format('woff2');
   font-display: swap;
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "DarkerGrotesque";
-  src: url(../fonts/DarkerGrotesque-Bold.woff2) format("woff2");
+  font-family: 'DarkerGrotesque';
+  src: url(../fonts/DarkerGrotesque-Bold.woff2) format('woff2');
   font-display: swap;
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "DarkerGrotesque";
-  src: url(../fonts/DarkerGrotesque-Regular.woff2) format("woff2");
+  font-family: 'DarkerGrotesque';
+  src: url(../fonts/DarkerGrotesque-Regular.woff2) format('woff2');
   font-display: swap;
   font-weight: 400;
   font-style: normal;
@@ -81,7 +85,7 @@ $orange_color: #eb5a1e;
 $gray_color: #65727e;
 
 body {
-  font-family: "Merriweather", serif;
+  font-family: 'Merriweather', serif;
   background-color: #f8f9f9;
   color: $main_color;
   font-weight: 400;
@@ -94,7 +98,7 @@ body {
   position: relative;
 }
 .container {
-  max-width: 1230px;
+  max-width: 1130px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -239,6 +243,12 @@ body {
   //padding: 10px;
   padding: 0.6rem;
   padding-left: 0;
+  cursor: pointer;
+
+  &__wrapper {
+    width: 315px;
+  }
+
   &__img {
     width: 25px;
     height: 25px;
@@ -254,15 +264,45 @@ body {
     position: absolute;
     right: 0;
     z-index: 10;
+
     background-color: #fff;
     padding: 10px;
     border-radius: 15px;
     box-shadow: 2px 2px 2px 2px lighten($gray_color, 40%);
   }
-
-  &__content-list {
+  &:hover {
+    .cart__content {
+      display: block;
+    }
   }
-  &__content-item:not(:last-child) {
+  // &:hover ~ .cart__content {
+  //   display: block;
+  // }
+  &__notification {
+    width: clamp(150px, 20vw, 300px);
+    height: auto;
+    //margin: 5px;
+  }
+  &__notification-title {
+    margin: 0;
+    padding: 10% 5% 10% 5%;
+    border-radius: 10px;
+    background-color: lighten($gray_color, 50%);
+    text-align: center;
+  }
+  &__notification-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    object-fit: cover;
+  }
+  &__content-list {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  &__content-item {
+    //:not(:last-child) {
     margin-bottom: 10px;
   }
   &__content-product {
@@ -273,34 +313,49 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    padding-top: 15px;
   }
-  &__delivey {
+  &__summary span {
+    font-family: 'Times New Roman', serif;
     font-size: 1.25rem;
-    flex-basis: 50%;
+    font-weight: 700;
+  }
+  &__delivery {
+    margin: 0;
+    font-size: 1rem;
+    flex-basis: 40%;
     text-align: center;
     span {
       color: $orange_color;
+      min-width: 35px;
+      display: inline-block;
     }
   }
-  &__delivey.free-delivery {
+  &__delivery.free-delivery {
     span {
       color: green;
     }
   }
   &__final-price {
+    margin: 0;
     font-size: 1rem;
-    flex-basis: 50%;
+    flex-basis: 60%;
     text-align: center;
     span {
-      font-family: "Times New Roman", serif;
-      font-size: 1.25rem;
-      font-weight: 700;
+      // font-family: 'Times New Roman', serif;
+      // font-size: 1.25rem;
+      // font-weight: 700;
       color: $orange_color;
     }
   }
   &__btn {
     font-size: 1rem;
+    margin-top: 15px;
   }
+}
+
+.d-block {
+  display: block;
 }
 
 .burger {
@@ -308,9 +363,10 @@ body {
   width: 25px;
   height: 15px;
   display: none;
+
   &::before,
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     width: 100%;
@@ -361,13 +417,13 @@ body {
 
 .burger-overlay {
   // position: fixed;
-  //background-color: rgba(231, 231, 231, 0);
+  // background-color: transparent;
   // width: 100%;
   // height: 100%;
   // top: 0;
   // left: 0;
-  // z-index: 100;
-  //transition: background-color 0.3s ease-in-out;
+  // z-index: -1;
+  // transition: background-color 0.9s ease-in-out;
 }
 
 .burger-overlay.burger-content--active {
@@ -391,6 +447,7 @@ body {
   padding: 10px;
   background: $main_color;
   transition: right 0.3s ease-in-out;
+  visibility: hidden;
 
   &__controls {
     position: relative;
@@ -405,7 +462,7 @@ body {
 
     &::before,
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 10px;
       left: 0;
@@ -447,6 +504,7 @@ body {
 
 .burger-content--active .burger-content {
   right: 0;
+  visibility: visible;
 }
 
 .btn {
@@ -485,13 +543,13 @@ body {
     object-fit: cover;
   }
   &__order {
-    margin: 10px 10px 0 10px;
+    margin: 10px 0 0 10px;
   }
   &__descr {
   }
   &__title {
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
   &__about {
     margin: 0;
@@ -500,7 +558,7 @@ body {
     font-size: 1rem;
     font-weight: 400;
     // font-style: italic;
-    font-family: "Times New Roman", serif;
+    font-family: 'Times New Roman', serif;
   }
   &__details {
     margin-top: 10px;
@@ -518,7 +576,7 @@ body {
   &__price {
     margin: 0;
     // font-size: 1rem;
-    font-family: "Times New Roman", serif;
+    font-family: 'Times New Roman', serif;
     font-weight: 700;
   }
 }
@@ -547,9 +605,13 @@ body {
 .products {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
   gap: 25px;
   position: relative;
   &__item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     padding: 10px 20px 20px 20px;
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.25rem;
@@ -561,22 +623,25 @@ body {
     object-fit: cover;
   }
   &__title {
+    flex: 1 1 auto; //next block will be pressed to the bottom to make cards the same height when title get bigger
+    font-size: 1.25rem;
   }
   &__portion {
     margin: 15px 0 0 0;
     text-align: center;
     font-weight: 400;
     // font-size: 1rem;
-    font-family: "Times New Roman", serif;
+    font-family: 'Times New Roman', serif;
     color: lighten($main_color, 30%);
   }
   &__details {
     display: flex;
+
     justify-content: space-around;
     align-items: center;
     margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
+    //margin-left: auto;
+    // margin-right: auto;
     //  width: 75%;
   }
   &__quantity {
@@ -591,7 +656,7 @@ body {
     // margin-left: -50px;
     //flex-grow: 1;
     //text-align: center;
-    font-family: "Times New Roman", serif;
+    font-family: 'Times New Roman', serif;
   }
   &__weight {
     margin: 0;
@@ -606,6 +671,11 @@ body {
   }
   &__btn-add {
     margin-top: 30px;
+  }
+  &__load-more {
+    width: 130px;
+    display: block;
+    margin: 15px auto 0 auto;
   }
   @media (max-width: 60.94rem) {
     //975px

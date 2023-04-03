@@ -1,0 +1,12 @@
+[
+  { "id": 1, "srcImg": "./img/roll/california-hit.jpg", "title": "California Hit", "portion": 6, "weight": 180, "price": 15 },
+  { "id": 2, "srcImg": "./img/roll/california-tempura.jpg", "title": "California Tempura", "portion": 6, "weight": 200, "price": 20 },
+  { "id": 3, "srcImg": "./img/roll/philadelphia.jpg", "title": "Philadelphia Roll", "portion": 6, "weight": 220, "price": 25 },
+  { "id": 4, "srcImg": "./img/roll/zapech-california.jpg", "title": "Сalifornia mayo", "portion": 6, "weight": 190, "price": 20 },
+  { "id": 5, "srcImg": "./img/roll/california-hit.jpg", "title": "Сalifornia royal", "portion": 6, "weight": 300, "price": 30 },
+  { "id": 6, "srcImg": "./img/roll/california-hit.jpg", "title": "California Hot", "portion": 6, "weight": 200, "price": 18 },
+  { "id": 7, "srcImg": "./img/roll/california-tempura.jpg", "title": "California spicy", "portion": 6, "weight": 210, "price": 20 },
+  { "id": 8, "srcImg": "./img/roll/philadelphia.jpg", "title": "Philadelphia spicy", "portion": 6, "weight": 200, "price": 20 },
+  { "id": 9, "srcImg": "./img/roll/zapech-california.jpg", "title": "Сalifornia sauce", "portion": 6, "weight": 250, "price": 25 },
+  { "id": 10, "srcImg": "./img/roll/california-hit.jpg", "title": "Tuma roll", "portion": 6, "weight": 260, "price": 30 }
+]

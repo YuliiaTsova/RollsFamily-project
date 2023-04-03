@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="./js/script.js" defer></script>
   <title>Rolls</title>
 </head>
 
@@ -15,7 +16,7 @@
     <div class="container">
       <div class="header__main">
         <div class="header__logo">
-          <img src="./img/logo.svg" alt="logo" class="header__logo-img">
+          <a href="#" class="header__link"><img src="./img/logo.svg" alt="logo" class="header__logo-img"></a>
           <h1 class="header__logo-title">RollsFamily</h1>
         </div>
         <nav class="header__nav nav">
@@ -26,62 +27,46 @@
             <li class="nav__item"><a href="#" class="nav__link">Review</a></li>
             <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
           </ul>
-          <div class="header__cart cart">
+          <div class="header__cart cart " tabindex="0">
             <img src="./img/cart.svg" alt="cart" class="cart__img">
             <span class="cart__quantity">0</span>
+
             <div class="cart__content">
-              <ul class="cart__content-list list-reset">
-                <li class="cart__content-item">
-                  <article class="cart__content-product cart-product">
-                    <div class="cart-product__pic">
-                      <img src="./img/roll-2.jpg" alt="Philadelphia Roll" class="cart-product__img">
-                    </div>
-                    <div class="cart-product__order">
-                      <div class="cart-product__descr">
-                        <h3 class="cart-product__title">Philadelphia Roll</h3>
-                        <p class="cart-product__about">6 pcs / 205 g.</p>
+              <div class="cart__notification">
+                <p class="cart__notification-title">Your cart is empty</p>
+                <img src="./img/cart-empty.svg" alt="empty cart" class="cart__notification-img">
+              </div>
+              <div class="cart__wrapper d-none">
+                <ul class="cart__content-list list-reset">
+                  <!-- <li class="cart__content-item">
+                    <article class="cart__content-product cart-product">
+                      <div class="cart-product__pic">
+                        <img src="./img/roll-2.jpg" alt="Philadelphia Roll" class="cart-product__img">
                       </div>
-                      <div class="cart-product__details">
-                        <div class="cart-product__quantity">
-                          <div class="quantity">
-                            <button class="quantity__minus btn-reset" aria-label="minus one">-</button>
-                            <span class="quantity__value">1</span>
-                            <button class="quantity__add btn-reset" aria-label="add one">+</button>
-                          </div>
+                      <div class="cart-product__order">
+                        <div class="cart-product__descr">
+                          <h3 class="cart-product__title">Philadelphia Roll</h3>
+                          <p class="cart-product__about">6 pcs / 205 g.</p>
                         </div>
-                        <p class="cart-product__price">15 $</p>
-                      </div>
-                    </div>
-                  </article>
-                </li>
-                <li class="cart__content-item">
-                  <article class="cart__content-product cart-product">
-                    <div class="cart-product__pic">
-                      <img src="./img/roll-2.jpg" alt="Philadelphia Roll" class="cart-product__img">
-                    </div>
-                    <div class="cart-product__order">
-                      <div class="cart-product__descr">
-                        <h3 class="cart-product__title">Philadelphia Roll</h3>
-                        <p class="cart-product__about">6 pcs / 205 g.</p>
-                      </div>
-                      <div class="cart-product__details">
-                        <div class="cart-product__quantity">
-                          <div class="quantity">
-                            <button class="quantity__minus btn-reset" aria-label="minus one">-</button>
-                            <span class="quantity__value">1</span>
-                            <button class="quantity__add btn-reset" aria-label="add one">+</button>
+                        <div class="cart-product__details">
+                          <div class="cart-product__quantity">
+                            <div class="quantity">
+                              <button class="quantity__minus btn-reset" aria-label="minus one">-</button>
+                              <span class="quantity__value">1</span>
+                              <button class="quantity__add btn-reset" aria-label="add one">+</button>
+                            </div>
                           </div>
+                          <p class="cart-product__price">15 $</p>
                         </div>
-                        <p class="cart-product__price">15 $</p>
                       </div>
-                    </div>
-                  </article>
-                </li>
-              </ul>
-              <div class="cart__summary">
-                <p class="cart__delivey free-delivery">Delivery: <span>free</span></p>
-                <p class="cart__final-price">Subtotal: <span>15$</span></p>
-                <button class="cart__btn btn btn-intense btn-reset">GO TO CHECKOUT</button>
+                    </article>
+                  </li> -->
+                </ul>
+                <div class="cart__summary">
+                  <p class="cart__delivery">Delivery: <span>0 $</span></p>
+                  <p class="cart__final-price">Subtotal: <span>0 $</span></p>
+                  <button class="cart__btn btn btn-intense btn-reset">GO TO CHECKOUT</button>
+                </div>
               </div>
             </div>
           </div>
@@ -119,122 +104,116 @@
   <main class="main">
     <h2 class="visually-hidden">List of products</h2>
     <div class="container">
-      <div class="products">
-        <article class="products__item">
-          <img src="./img/roll-1.jpg" alt="Philadelphia Roll" class="products__img">
-          <h2 class="products__title title">Philadelphia Roll</h2>
-          <p class="products__portion">6 pcs</p>
-          <div class="products__details">
-            <div class="products__quantity">
-              <div class="quantity">
-                <button class="quantity__minus btn-reset" aria-label="minus one">-</button>
-                <span class="quantity__value">1</span>
-                <button class="quantity__add btn-reset" aria-label="add one">+</button>
+      <ul class="products list-reset">
+        <!-- <li class="products__list-item">
+          <article class="products__item">
+            <img src="./img/roll/california-hit.jpg" alt="California Hit" class="products__img">
+            <h2 class="products__title title">California Hit</h2>
+            <p class="products__portion">6 pcs</p>
+            <div class="products__details">
+              <div class="products__quantity">
+                <div class="quantity">
+                  <button class="quantity__minus btn-reset" aria-label="minus one" data-action="minus">-</button>
+                  <span class="quantity__value" data-counter>1</span>
+                  <button class="quantity__add btn-reset" aria-label="add one" data-action="add">+</button>
+                </div>
+              </div>
+              <div class="products__desc">
+                <p class="products__weight">180 g</p>
+                <p class="products__price">15 $</p>
               </div>
             </div>
-            <div class="products__desc">
-              <p class="products__weight">180 g</p>
-              <p class="products__price">15 $</p>
-            </div>
-          </div>
-          <button class="products__btn-add btn btn-reset" aria-label="add to cart">+ add to cart</button>
-        </article>
-        <article class="products__item">
-          <img src="./img/roll-1.jpg" alt="Philadelphia Roll" class="products__img">
-          <h2 class="products__title title">Philadelphia Roll</h2>
-          <p class="products__portion">6 pcs</p>
-          <div class="products__details">
-            <div class="products__quantity">
-              <div class="quantity">
-                <button class="quantity__minus btn-reset" aria-label="minus one">-</button>
-                <span class="quantity__value">1</span>
-                <button class="quantity__add btn-reset" aria-label="add one">+</button>
+            <button class="products__btn-add btn btn-reset" aria-label="add to cart">+ add to cart</button>
+          </article>
+        </li>
+        <li class="products__list-item">
+          <article class="products__item">
+            <img src="./img/roll/california-tempura.jpg" alt="California Tempura" class="products__img">
+            <h2 class="products__title title">California Tempura</h2>
+            <p class="products__portion">6 pcs</p>
+            <div class="products__details">
+              <div class="products__quantity">
+                <div class="quantity">
+                  <button class="quantity__minus btn-reset" aria-label="minus one" data-action="minus">-</button>
+                  <span class="quantity__value" data-counter>1</span>
+                  <button class="quantity__add btn-reset" aria-label="add one" data-action="add">+</button>
+                </div>
+              </div>
+              <div class="products__desc">
+                <p class="products__weight">180 g</p>
+                <p class="products__price">15 $</p>
               </div>
             </div>
-            <div class="products__desc">
-              <p class="products__weight">180 g</p>
-              <p class="products__price">15 $</p>
-            </div>
-          </div>
-          <button class="products__btn-add btn btn-reset" aria-label="add to cart">+ add to cart</button>
-        </article>
-        <article class="products__item">
-          <img src="./img/roll-1.jpg" alt="Philadelphia Roll" class="products__img">
-          <h2 class="products__title title">Philadelphia Roll</h2>
-          <p class="products__portion">6 pcs</p>
-          <div class="products__details">
-            <div class="products__quantity">
-              <div class="quantity">
-                <button class="quantity__minus btn-reset" aria-label="minus one">-</button>
-                <span class="quantity__value">1</span>
-                <button class="quantity__add btn-reset" aria-label="add one">+</button>
+            <button class="products__btn-add btn btn-reset" aria-label="add to cart">+ add to cart</button>
+          </article>
+        </li>
+        <li class="products__list-item">
+          <article class="products__item">
+            <img src="./img/roll/philadelphia.jpg" alt="Philadelphia Roll" class="products__img">
+            <h2 class="products__title title">Philadelphia Roll</h2>
+            <p class="products__portion">4 pcs</p>
+            <div class="products__details">
+              <div class="products__quantity">
+                <div class="quantity">
+                  <button class="quantity__minus btn-reset" aria-label="minus one" data-action="minus">-</button>
+                  <span class="quantity__value" data-counter>1</span>
+                  <button class="quantity__add btn-reset" aria-label="add one" data-action="add">+</button>
+                </div>
+              </div>
+              <div class="products__desc">
+                <p class="products__weight">200 g</p>
+                <p class="products__price">25 $</p>
               </div>
             </div>
-            <div class="products__desc">
-              <p class="products__weight">180 g</p>
-              <p class="products__price">15 $</p>
-            </div>
-          </div>
-          <button class="products__btn-add btn btn-reset" aria-label="add to cart">+ add to cart</button>
-        </article>
-        <article class="products__item">
-          <img src="./img/roll-1.jpg" alt="Philadelphia Roll" class="products__img">
-          <h2 class="products__title title">Philadelphia Roll</h2>
-          <p class="products__portion">6 pcs</p>
-          <div class="products__details">
-            <div class="products__quantity">
-              <div class="quantity">
-                <button class="quantity__minus btn-reset" aria-label="minus one">-</button>
-                <span class="quantity__value">1</span>
-                <button class="quantity__add btn-reset" aria-label="add one">+</button>
+            <button class="products__btn-add btn btn-reset" aria-label="add to cart">+ add to cart</button>
+          </article>
+        </li>
+        <li class="products__list-item">
+          <article class="products__item">
+            <img src="./img/roll/zapech-california.jpg" alt="Сalifornia mayo" class="products__img">
+            <h2 class="products__title title">Сalifornia mayo</h2>
+            <p class="products__portion">6 pcs</p>
+            <div class="products__details">
+              <div class="products__quantity">
+                <div class="quantity">
+                  <button class="quantity__minus btn-reset" aria-label="minus one" data-action="minus">-</button>
+                  <span class="quantity__value" data-counter>1</span>
+                  <button class="quantity__add btn-reset" aria-label="add one" data-action="add">+</button>
+                </div>
+              </div>
+              <div class="products__desc">
+                <p class="products__weight">110 g</p>
+                <p class="products__price">10 $</p>
               </div>
             </div>
-            <div class="products__desc">
-              <p class="products__weight">180 g</p>
-              <p class="products__price">15 $</p>
-            </div>
-          </div>
-          <button class="products__btn-add btn btn-reset" aria-label="add to cart">+ add to cart</button>
-        </article>
-        <article class="products__item">
-          <img src="./img/roll-1.jpg" alt="Philadelphia Roll" class="products__img">
-          <h2 class="products__title title">Philadelphia Roll</h2>
-          <p class="products__portion">6 pcs</p>
-          <div class="products__details">
-            <div class="products__quantity">
-              <div class="quantity">
-                <button class="quantity__minus btn-reset" aria-label="minus one">-</button>
-                <span class="quantity__value">1</span>
-                <button class="quantity__add btn-reset" aria-label="add one">+</button>
+            <button class="products__btn-add btn btn-reset" aria-label="add to cart">+ add to cart</button>
+          </article>
+        </li>
+        <li class="products__list-item">
+          <article class="products__item">
+            <img src="./img/roll/california-hit.jpg" alt="Сalifornia royal" class="products__img">
+            <h2 class="products__title title">Сalifornia royal</h2>
+            <p class="products__portion">6 pcs</p>
+            <div class="products__details">
+              <div class="products__quantity">
+                <div class="quantity">
+                  <button class="quantity__minus btn-reset" aria-label="minus one" data-action="minus">-</button>
+                  <span class="quantity__value" data-counter>1</span>
+                  <button class="quantity__add btn-reset" aria-label="add one" data-action="add">+</button>
+                </div>
+              </div>
+              <div class="products__desc">
+                <p class="products__weight">380 g</p>
+                <p class="products__price">30 $</p>
               </div>
             </div>
-            <div class="products__desc">
-              <p class="products__weight">180 g</p>
-              <p class="products__price">15 $</p>
-            </div>
-          </div>
-          <button class="products__btn-add btn btn-reset" aria-label="add to cart">+ add to cart</button>
-        </article>
-        <article class="products__item">
-          <img src="./img/roll-1.jpg" alt="Philadelphia Roll" class="products__img">
-          <h2 class="products__title title">Philadelphia Roll</h2>
-          <p class="products__portion">6 pcs</p>
-          <div class="products__details">
-            <div class="products__quantity">
-              <div class="quantity">
-                <button class="quantity__minus btn-reset" aria-label="minus one">-</button>
-                <span class="quantity__value">1</span>
-                <button class="quantity__add btn-reset" aria-label="add one">+</button>
-              </div>
-            </div>
-            <div class="products__desc">
-              <p class="products__weight">180 g</p>
-              <p class="products__price">15 $</p>
-            </div>
-          </div>
-          <button class="products__btn-add btn btn-reset" aria-label="add to cart">+ add to cart</button>
-        </article>
-      </div>
+            <button class="products__btn-add btn btn-reset" aria-label="add to cart">+ add to cart</button>
+          </article>
+        </li> -->
+
+      </ul>
+      <button class="products__load-more btn-reset  btn btn-intense " aria-label="load more products"> Load more
+      </button>
     </div>
   </main>
   <footer class="footer">
