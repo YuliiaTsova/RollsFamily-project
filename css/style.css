@@ -226,6 +226,11 @@ body {
   border-radius: 15px;
   box-shadow: 2px 2px 2px 2px #d3d8dc;
 }
+@media (max-width: 925px) {
+  .cart__content {
+    right: -45px;
+  }
+}
 .cart:hover .cart__content {
   display: block;
 }
@@ -409,7 +414,7 @@ body {
 
 .btn {
   width: 100%;
-  padding: 5px 10px;
+  padding: 10px 10px;
   color: #eb5a1e;
   border: 1px solid #eb5a1e;
   border-radius: 5px;
@@ -441,6 +446,11 @@ body {
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (max-width: 370px) {
+  .cart-product__img {
+    width: 100px;
+  }
 }
 .cart-product__order {
   margin: 10px 0 0 10px;
