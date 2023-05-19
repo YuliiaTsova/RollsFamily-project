@@ -231,7 +231,10 @@ window.addEventListener('click', (e) => {
     navList.classList.add('burger-content--active');
     burgerOverlay.classList.add('burger-content--active');
     document.body.classList.add('stop-scroll');
-  } else if (!e.target.closest('.burger-content') || e.target.closest('.burger-content__btn')) {
+  } else if (
+    !e.target.closest('.burger-content') ||
+    e.target.closest('.burger-content__btn')
+  ) {
     navList.classList.remove('burger-content--active');
     burgerOverlay.classList.remove('burger-content--active');
     document.body.classList.remove('stop-scroll');

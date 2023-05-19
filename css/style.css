@@ -537,7 +537,7 @@ body {
 }
 .products__quantity {
   width: 60%;
-  height: 30px;
+  height: 40px;
 }
 media .products__desc {
   font-family: "Times New Roman", serif;
@@ -589,6 +589,7 @@ media .products__desc {
   height: 100%;
   border-bottom-left-radius: 8px;
   border-top-left-radius: 8px;
+  color: #000;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 .quantity__minus:hover {
@@ -603,6 +604,7 @@ media .products__desc {
   height: 100%;
   border-bottom-right-radius: 8px;
   border-top-right-radius: 8px;
+  color: #000;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 .quantity__add:hover {
