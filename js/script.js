@@ -73,9 +73,14 @@ const cartItemHtml = (data) => {
 //downloading products
 
 const getProducts = async () => {
-  const response = await fetch('./productItems.json');
-  products = await response.json();
-  renderProducts(products);
+  try {
+    const response = await fetch('./productItems.json');
+    products = await response.json();
+    renderProducts(products);
+  } catch (err) {
+    console.log('er', err);
+    alert('failed to load a data');
+  }
 };
 
 getProducts();
